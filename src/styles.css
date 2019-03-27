@@ -1,0 +1,52 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.scene {
+  width: 200px;
+  height: 260px;
+  perspective: 600px;
+  margin: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: relative;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  overflow: hidden;
+}
+
+.card__face--back {
+  background: green;
+  transform: rotateY(180deg);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+}
